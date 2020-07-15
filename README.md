@@ -33,7 +33,8 @@ $ cd bin
 $ ./main.rb
 ```
 
-Follow the prompts and enjoy the results
+Follow the prompts and enjoy the results .
+(make sure dependencies are installed as described above)
 
 ![screenshot](./img/start_scraper.png.png)
 
