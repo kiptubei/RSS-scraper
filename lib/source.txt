@@ -1,0 +1,17 @@
+http://feeds.bbci.co.uk/news/world/rss.xml
+https://www.voanews.com/taxonomy/term/562841/feed
+https://rss.dw.com/rdf/rss-en-world
+https://www.aljazeera.com/xml/rss/all.xml
+https://rss.nytimes.com/services/xml/rss/nyt/World.xml
+http://www.xinhuanet.com/english/rss/worldrss.xml
+https://www.standardmedia.co.ke/rss/world.php
+https://www.cnbc.com/id/100727362/device/rss/rss.html
+https://www.yahoo.com/news/rss/world
+https://www.time.com/feed
+http://rss.time.com/web/time/rss/world/index.xml
+https://www.scmp.com/rss/91/feed
+http://feeds.skynews.com/feeds/rss/world.xml
+http://www.globalnews.ca/world/feed
+http://www.france24.com/en/rss
+http://www.todayonline.com/feed/world
+https://www.radarr.africa/feed

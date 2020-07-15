@@ -41,22 +41,11 @@ class Scraper
       next unless contains_word?(txt, words)
 
       data = write_parsed_data(article, url)
-      write_results(data)
+      write_results(data, 'results.txt')
       @news << data
+      # byebug
     end
     @news
-  end
-
-  # write reulting filtered data into hash data
-  def write_parsed_data(article, url)
-    data = {
-      title: article.css('title').text,
-      description: article.css('description').text,
-      link: article.css('link').text,
-      published: article.css('pubDate').text,
-      source: find_source(url)
-    }
-    data
   end
 
   # returns source of article e.g bbc
@@ -77,11 +66,11 @@ class Scraper
   end
 
   # append search results to file results.txt
-  def write_results(news)
-    file_data = File.write('results.txt',
-                           "#{news[:source]}:\n" \
-                           "#{news[:title]}:\n" \
-                           "#{news[:description]}:\n" \
+  def write_results(news, file_name)
+    file_data = File.write("lib/#{file_name}",
+                           "#{news[:source]}\n" \
+                           "#{news[:title]}\n" \
+                           "#{news[:description]}\n" \
                            "#{news[:link]}\n" \
                            "#{news[:published]}\n\n",
                            mode: 'a')
@@ -94,5 +83,19 @@ class Scraper
     file = File.open(File.join(File.dirname(__FILE__), name.to_s))
     file_url = file.readlines.map(&:chomp)
     file_url
+  end
+
+  private
+
+  # write resulting filtered data into hash data
+  def write_parsed_data(article, url)
+    data = {
+      title: article.css('title').text,
+      description: article.css('description').text,
+      link: article.css('link').text,
+      published: article.css('pubDate').text,
+      source: find_source(url)
+    }
+    data
   end
 end
