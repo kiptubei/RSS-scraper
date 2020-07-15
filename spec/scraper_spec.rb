@@ -1,6 +1,8 @@
 # spec/scraper_spec.rb
 
 require './lib/scraper'
+require 'nokogiri'
+require 'httparty'
 
 describe Scraper do
   subject { Scraper.new }
