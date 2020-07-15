@@ -1,6 +1,5 @@
 require 'httparty'
 require 'nokogiri'
-require 'byebug'
 
 class Scraper
   attr_accessor :news
@@ -43,7 +42,6 @@ class Scraper
       data = write_parsed_data(article, url)
       write_results(data, 'results.txt')
       @news << data
-      # byebug
     end
     @news
   end
