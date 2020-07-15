@@ -1,8 +1,10 @@
-require 'httparty'
+# scraper.rb
 require 'nokogiri'
+require 'httparty'
 
 class Scraper
   attr_accessor :news
+
   def initialize
     @news = []
   end
@@ -14,17 +16,6 @@ class Scraper
     urls.each do |url|
       parse(url, words)
     end
-  end
-
-  # returns true or false if title has the keywords being searched for
-  def contains_word?(title, words)
-    words.each do |word|
-      if /#{word.downcase}/.match(title.downcase)
-        puts word.downcase + ' -- ' + title.downcase
-        return true
-      end
-    end
-    false
   end
 
   def get_parsed_page(url)
@@ -81,6 +72,17 @@ class Scraper
     file = File.open(File.join(File.dirname(__FILE__), name.to_s))
     file_url = file.readlines.map(&:chomp)
     file_url
+  end
+
+  # returns true or false if title has the keywords being searched for
+  def contains_word?(title, words)
+    words.each do |word|
+      if /#{word.downcase}/.match(title.downcase)
+        puts word.downcase + ' -- ' + title.downcase
+        return true
+      end
+    end
+    false
   end
 
   private
