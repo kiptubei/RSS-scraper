@@ -85,8 +85,6 @@ For the: [Github-link](https://github.com/kiptubei/RSS-scraper/)
 
 ## Live Demo
 
-[Live Demo Link]()
-
 ## Show your support
 
 Give a ⭐️ if you like this project!
