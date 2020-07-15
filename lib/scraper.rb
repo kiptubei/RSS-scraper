@@ -16,6 +16,7 @@ class Scraper
     urls.each do |url|
       parse(url, words)
     end
+    puts 'no data available for search terms' if news.count.zero?
   end
 
   def get_parsed_page(url)
@@ -43,15 +44,6 @@ class Scraper
     st = lines.split(/[.]/) # use regex to identify decimal point '.' and split into array
     ans = st[1]
     ans
-  end
-
-  # get search terms from user returns array search
-  def find_search_terms
-    puts 'Enter search criteria e.g Corona+Covid+Pandemic:'
-    print '>'
-    search_text = gets.chomp
-    search = search_text.split('+')
-    search
   end
 
   # append search results to file results.txt
@@ -97,5 +89,14 @@ class Scraper
       source: find_source(url)
     }
     data
+  end
+
+  # get search terms from user returns array search
+  def find_search_terms
+    puts 'Enter search criteria e.g Corona+Covid+Pandemic:'
+    print '>'
+    search_text = gets.chomp
+    search = search_text.split('+')
+    search
   end
 end

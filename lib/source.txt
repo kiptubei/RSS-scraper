@@ -12,6 +12,5 @@ http://rss.time.com/web/time/rss/world/index.xml
 https://www.scmp.com/rss/91/feed
 http://feeds.skynews.com/feeds/rss/world.xml
 http://www.globalnews.ca/world/feed
-http://www.france24.com/en/rss
 http://www.todayonline.com/feed/world
 https://www.radarr.africa/feed
