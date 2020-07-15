@@ -1,6 +1,6 @@
 # spec/scraper_spec.rb
 
-require_relative './lib/scraper'
+require './lib/scraper'
 require 'nokogiri'
 require 'httparty'
 
