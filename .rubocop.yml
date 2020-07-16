@@ -2,8 +2,8 @@ AllCops:
   Exclude:
     - "Guardfile"
     - "Rakefile"
-    - "spec/board_spec.rb"
     - "spec/spec_helper.rb"
+    - "spec/scraper_spec.rb"
   DisplayCopNames: true
 
 Layout/LineLength:
@@ -15,7 +15,7 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
-  ExcludedMethods: ['describe']
+  ExcludedMethods: ["describe"]
   Max: 30
 Metrics/CyclomaticComplexity:
   Max: 11
@@ -54,5 +54,4 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
-
 # rubocop:disable Style/CaseEquality
