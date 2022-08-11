@@ -14,7 +14,7 @@ Output is also stored in an easy to access text file in lib/result.txt
 
 ## Instructions 🔧
 
-From your command line, first clone the project:
+From your command line, first clone the project: LIKE SO:
 
 ```bash
 # Clone this repository
