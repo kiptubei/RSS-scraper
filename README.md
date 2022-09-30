@@ -1,4 +1,4 @@
-# RSS-scraper 1
+# RSS-scraper 1.0
 
 Web scraper that gets articles of your choice from multiple news feeds .Just specify which topics
 you are interested in and voila! No need to spend hours surfing the web looking through infinite websites.
